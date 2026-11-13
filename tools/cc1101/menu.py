@@ -26,8 +26,8 @@ def _module_menu(index):
 
 
 def build_menu(app):
-    entries = [MenuEntry("Module 1", lambda a: a.navigation.open(_module_menu(0))),
-               MenuEntry("Module 2", lambda a: a.navigation.open(_module_menu(1))),
+    entries = [MenuEntry("Right Module", lambda a: a.navigation.open(_module_menu(0))),
+               MenuEntry("Left Module", lambda a: a.navigation.open(_module_menu(1))),
                MenuEntry("Back", lambda a: a.navigation.back())]
     return submenu("CC1101", [entry.label for entry in entries[:-1]],
                    dict((entry.label, entry.action) for entry in entries[:-1]))
